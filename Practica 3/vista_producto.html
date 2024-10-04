@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera página principal</title>
+    <link rel="stylesheet" href="Estilos/styles.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="encabezado">
+        <nav>
+            <ul>
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#Sobre-mi">QUIÉNES SOMOS</a></li>
+                <li><a href="#Galeria-Productos">PRODUCTOS</a></li>
+                <li><a href="#Contacto">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+        <div class="slides">
+            <img src="assets/Imagenes/slider/encabezado1.jpg" alt="encabezado1" class="slide active" />
+            <img src="assets/Imagenes/slider/encabezado2.jpg" alt="encabezado2" class="slide" />
+            <img src="assets/Imagenes/slider/encabezado3.jpg" alt="encabezado3" class="slide" />
+            <img src="assets/Imagenes/slider/encabezado4.jpg" alt="encabezado4" class="slide" />
+        </div>
+    </div>
+
+    <!-- Contenedor de producto dinámico -->
+    <div id="producto-contenedor" class="producto-gal">
+        <div class="producto-imagen">
+            <img id="producto-imagen" src="" alt="Producto">
+        </div>
+        <div class="Productos">
+            <h1 id="nombre_producto">Nombre del Producto</h1>
+            <p id="descripcion_producto">Descripción del producto.</p>
+            <h2 id="precio_producto">$0.00</h2>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" value="1" />
+            <button class="boton-comprar">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <!-- Botones para cambiar entre productos -->
+    <div class="producto-navegacion">
+        <button onclick="cambiarProducto(0)">Producto 1</button>
+        <button onclick="cambiarProducto(1)">Producto 2</button>
+        <button onclick="cambiarProducto(2)">Producto 3</button>
+    </div>
+
+    <!-- Incluir el archivo de JavaScript -->
+    <script src="scripts/productos_ver.js"></script>
+
+</body>
+
+</html>
